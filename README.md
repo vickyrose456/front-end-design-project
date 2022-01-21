@@ -1,1 +1,1 @@
-# front-end-design-project
+# Software Development & Front-End Design Project
