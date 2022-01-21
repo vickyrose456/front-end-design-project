@@ -1,0 +1,33 @@
+{
+    "result_ok": true,
+    "total_count": 3,
+    "page": 1,
+    "total_pages": 1,
+    "results_per_page": 3,
+    "data": [
+		{
+			"id": 1,
+			"title": "first",
+			"bounds": {
+				"x": 6,
+				"y": 12
+			}
+		},
+		{
+			"id": 2,
+			"title": "second",
+			"bounds": {
+				"x": 5,
+				"y": 7
+			}
+		},
+		{
+			"id": 3,
+			"title": "third",
+			"bounds": {
+				"x": 9,
+				"y": 8
+			}
+		}
+    ]
+}
