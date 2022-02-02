@@ -81,6 +81,7 @@
 <script type="text/javascript">
 
 	let mult = document.querySelector("#multiplication");
+	let arrNums = [];
 
 	//get the x and y values respectively from user input when load is clicked
 	let xVal;
@@ -114,11 +115,19 @@
 		//For loop to add elements to each row/ col
 		for (let i = 0; i <= xVal; i++) {
 			let row = document.createElement('tr');
-			tableElem.appendChild(row);
 
+			tableElem.appendChild(row);
+			if (i == 0) {
+				row.style.backgroundColor = "black";
+				row.style.color = "white";
+			}
 
 			for (let j = 0; j <= yVal; j++) {
 				let col = document.createElement('td');
+				if (j == 0) {
+					col.style.backgroundColor = "black";
+					col.style.color = "white";
+				}
 				//display the multiple in the box
 				col.appendChild(document.createTextNode(i * j));
 				row.appendChild(col);
@@ -131,9 +140,7 @@
 
 	function checkQuartile(Arrnum) {
 		//use the array of numbers to check the quartile and make the background color accordingly
-		if (num) {
 
-		}
 	}
 
 
