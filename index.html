@@ -42,7 +42,9 @@
 		<label for="y-depth">Y-Depth:</label>
 		<input type="text" id="y-depth" name="y-depth">
 
-		<div class="button">Load</div>
+
+		<button class="button" type="button" id="button">Load</button>
+
 	</div>
 	<div id="multiplication">
 
@@ -56,27 +58,54 @@
 
 	let description = document.querySelector("#description");
 
-	//create table elem
-	let table = document.createElement('table');
-	let tableElem = document.createElement('tableElem');
-	table.appendChild(tableElem);
+	//get the x and y values respectively from user input when load is clicked
+	let xVal;
+	let yVal;
 
-	//For loop to add elements to each row/ col
-	for (let i = 0; i <= 10; i++) {
-		let row = document.createElement('tr');
-		tableElem.appendChild(row);
+	function buttonClicked() {
+		console.log("Click");
+		//get x and y values and store them 
+		xVal = document.querySelector("#x-depth").value;
+		yVal = document.querySelector('#y-depth').value;
 
-
-		for (let j = 0; j <= 10; j++) {
-			let col = document.createElement('td');
-			//display the multiple in the box
-			col.appendChild(document.createTextNode(i * j));
-			row.appendChild(col);
-		}
+		//create the table element, clear the previous table
+		description.innerHTML = "";
+		createTable();
 	}
-	//add the table to the page
-	table.border = '1';
-	description.appendChild(table);
+
+	try {
+
+		document.querySelector("#button").onclick = buttonClicked;
+	} catch {
+		console.log('error');
+	}
+
+
+	function createTable() {
+		//create table elem
+		let table = document.createElement('table');
+		let tableElem = document.createElement('tableElem');
+		table.appendChild(tableElem);
+
+		//For loop to add elements to each row/ col
+		for (let i = 0; i <= xVal; i++) {
+			let row = document.createElement('tr');
+			tableElem.appendChild(row);
+
+
+			for (let j = 0; j <= yVal; j++) {
+				let col = document.createElement('td');
+				//display the multiple in the box
+				col.appendChild(document.createTextNode(i * j));
+				row.appendChild(col);
+			}
+		}
+		//add the table to the page
+		table.border = '1';
+		description.appendChild(table);
+	}
+
+
 
 </script>
 
