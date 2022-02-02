@@ -129,14 +129,20 @@
 					col.style.color = "white";
 				}
 				//display the multiple in the box
+				arrNums.push({ xValue: i, yValue: j, mult: i * j });
 				col.appendChild(document.createTextNode(i * j));
 				row.appendChild(col);
 			}
 		}
+
+		console.log(arrNums);
+
 		//add the table to the page
 		table.border = '1';
 		mult.appendChild(table);
-	}
+	}//end create table
+
+
 
 	function checkQuartile(Arrnum) {
 		//use the array of numbers to check the quartile and make the background color accordingly
