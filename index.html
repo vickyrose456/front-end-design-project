@@ -50,26 +50,34 @@
 
 	</div>
 	<div id="description">
+		<ol>
+			<li>The difference between a library and a framework is that a framework is the structure
+				and organization of the javascript. Meanwhile a library has prewritten code to help create
+				an application.
+			</li>
+			<li>
 
+			</li>
+		</ol>
 	</div>
 </body>
 
 <script type="text/javascript">
 
-	let description = document.querySelector("#description");
+	let mult = document.querySelector("#multiplication");
 
 	//get the x and y values respectively from user input when load is clicked
 	let xVal;
 	let yVal;
 
 	function buttonClicked() {
-		console.log("Click");
+		//console.log("Click");
 		//get x and y values and store them 
 		xVal = document.querySelector("#x-depth").value;
 		yVal = document.querySelector('#y-depth').value;
 
 		//create the table element, clear the previous table
-		description.innerHTML = "";
+		mult.innerHTML = "";
 		createTable();
 	}
 
@@ -102,9 +110,15 @@
 		}
 		//add the table to the page
 		table.border = '1';
-		description.appendChild(table);
+		mult.appendChild(table);
 	}
 
+	function checkQuartile(Arrnum) {
+		//use the array of numbers to check the quartile and make the background color accordingly
+		if (num) {
+
+		}
+	}
 
 
 </script>
